@@ -19,7 +19,7 @@ Your working file is `fileio.py`, which contains partial implementations of 10 f
 In addition, `fileio.py` contains a `run_example_operations()` function, which provides example usage of each file operation function and outputs log messages to explain the expected behaviors of the respective operations. 
 
 After implementing each function, uncomment the corresponding file in run_example() so that you can 
-make test your implementation.
+verify your implementation works as you expect.
 
 ## ✅ Tasks
 

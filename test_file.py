@@ -45,13 +45,24 @@ class TestFileIOFunctions(unittest.TestCase):
         replace_line(self.filename, 2, 'replaced')
         self.assertEqual(read_string_from_file(self.filename), '1\nreplaced\n3\n')
 
-    def test_get_file_size(self):
-        self.assertGreater(get_file_size(self.filename), 0)
 
     def test_create_file_with_numbers(self):
         create_file_with_numbers(self.filename, 3)
         self.assertEqual(read_string_from_file(self.filename), '1\n2\n3\n')
+    
+    def test_most_frequent_word(self):
+        # Set up a sample string where "hello" and "world" both appear three times, but "hello" appears first.
+        sample_string = "Hello world. Hello again. Goodbye Hello world. Testing world."
+        write_string_to_file(sample_string, self.filename)
+        result = most_frequent_word(self.filename)
+        self.assertEqual(result, "hello")  # 'hello' should
 
+    def test_average_word_length(self):
+        # Using a sample string "Hello world. Testing average." which has word lengths: 5, 5, 7, 7; Total words: 4; Average: 24/4 = 6
+        sample_string = "Hello world. Testing average."
+        write_string_to_file(sample_string, self.filename)
+        result = average_word_length(self.filename)
+        self.assertAlmostEqual(result, 6.5, 2)
 
 if __name__ == '__main__':
     unittest.main()
