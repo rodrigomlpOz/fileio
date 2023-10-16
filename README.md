@@ -34,7 +34,7 @@ python fileio.py
 ````
 
 You should see a file being created on the sidebar. If you open it up you will see that
-content was written to it. This is to helo you understand how to use run_example_operations()
+a string was written to it. This is to help you understand how to use run_example_operations()
 
 - Also run before starting on the terminal
 
