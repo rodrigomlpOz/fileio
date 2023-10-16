@@ -3,10 +3,55 @@ import os
 
 from fileio import *
 
-def test_count_lines():
-    assert count_lines('./test.txt') == 3
+# Unit Tests
+class TestFileIOFunctions(unittest.TestCase):
+    def setUp(self):
+        self.filename = 'test.txt'
+        self.test_string = 'Hello, World!'
+        write_string_to_file(self.test_string, self.filename)
 
-# def test_print_lines(capsys):
-#     print_lines('./test.txt')
-#     captured = capsys.readouterr()
-#     assert captured.out == "Hello, World!\nThis is a test file.\nPython is fun!\n"
+    def tearDown(self):
+        try:
+            os.remove(self.filename)
+            os.remove('copy_' + self.filename)
+        except FileNotFoundError:
+            pass
+
+    def test_write_read_string(self):
+        self.assertEqual(read_string_from_file(self.filename), self.test_string)
+
+    def test_append_string(self):
+        append_string_to_file(self.test_string, self.filename)
+        self.assertEqual(read_string_from_file(self.filename), self.test_string + self.test_string)
+
+    def test_copy_file_content(self):
+        copy_file_content(self.filename, 'copy_' + self.filename)
+        self.assertEqual(read_string_from_file('copy_' + self.filename), self.test_string)
+
+    def test_count_lines(self):
+        create_file_with_numbers(self.filename, 5)
+        self.assertEqual(count_lines(self.filename), 5)
+
+    def test_find_string(self):
+        self.assertEqual(find_string_in_file('World', self.filename), 1)
+
+    def test_delete_line(self):
+        create_file_with_numbers(self.filename, 3)
+        delete_line(self.filename, 2)
+        self.assertEqual(read_string_from_file(self.filename), '1\n3\n')
+
+    def test_replace_line(self):
+        create_file_with_numbers(self.filename, 3)
+        replace_line(self.filename, 2, 'replaced')
+        self.assertEqual(read_string_from_file(self.filename), '1\nreplaced\n3\n')
+
+    def test_get_file_size(self):
+        self.assertGreater(get_file_size(self.filename), 0)
+
+    def test_create_file_with_numbers(self):
+        create_file_with_numbers(self.filename, 3)
+        self.assertEqual(read_string_from_file(self.filename), '1\n2\n3\n')
+
+
+if __name__ == '__main__':
+    unittest.main()
