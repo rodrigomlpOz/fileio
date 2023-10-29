@@ -1,7 +1,7 @@
 {
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
-        "../fileio.py"
+        "../exercise.py"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,

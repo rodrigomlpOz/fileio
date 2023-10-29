@@ -14,8 +14,6 @@ def write_string_to_file(s, filename):
     Returns:
     None
     """
-    with open(filename, 'w') as f:
-        f.write(s)
         
 # Problem 2: Write a function to read a string from a file.
 def read_string_from_file(filename):
@@ -28,6 +26,8 @@ def read_string_from_file(filename):
     Returns:
     str: The content of the file.
     """
+    with open(filename, 'r') as f:
+        return f.read()
 
 # Problem 3: Write a function to append a string to a file.
 def append_string_to_file(s, filename):
@@ -157,7 +157,7 @@ def average_word_length(filename):
 
 
 
-def run_example_operations():
+def driver():
     print("Running example operations...\n")
     
     filename = "example.txt"
@@ -218,4 +218,4 @@ def run_example_operations():
 
     
 if __name__ == "__main__":
-    run_example_operations()
+    driver()

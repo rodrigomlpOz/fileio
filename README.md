@@ -14,9 +14,9 @@ Welcome, students! 🚀 This exercise is designed to deepen your understanding o
 
 ## 🔍 Overview
 
-Your working file is `fileio.py`, which contains partial implementations of 10 functions, each designed to perform a unique file operation.
+Your working file is `exercise.py`, which contains partial implementations of 10 functions, each designed to perform a unique file operation.
 
-In addition, `fileio.py` contains a `run_example_operations()` function, which provides example usage of each file operation function and outputs log messages to explain the expected behaviors of the respective operations. 
+In addition, `exercise.py` contains a `driver()` function, which provides example usage of each file operation function and outputs log messages to explain the expected behaviors of the respective operations. 
 
 After implementing each function, uncomment the corresponding file in run_example() so that you can 
 verify your implementation works as you expect.
@@ -25,12 +25,12 @@ verify your implementation works as you expect.
 
 ### 1️⃣ Understand the distribution code
 
-While working in `fileio.py`:
+While working in `exercise.py`:
 - Read the documentation (docstrings) of each function to understand what you need to implement.
 - Run the following in the terminal:
 
 ````bash
-python fileio.py
+python exercise.py
 ````
 
 You should see a file being created on the sidebar. If you open it up you will see that
@@ -45,15 +45,7 @@ pytest
 You should run this after completing each function to verify that it was correctly implemented. Once
 all tests pass you can submit your code for review.
 
-### 2️⃣ Debugging with VSCode
-
-Should your functions exhibit unexpected behaviors or issues:
-- Place breakpoints in your code within VSCode.
-- Use the VSCode debugger to navigate through your code, inspect variables, and diagnose potential issues.
-- Modify your code as needed, guided by your findings during debugging.
-- [Debugger Tutorial](https://www.youtube.com/watch?v=7qZBwhSlfOo&t=7s)
-
-### 3️⃣ Implementing the function
+### 2️⃣ Implementing the function
 
 Implement each function in the TODO. Do the following steps:
 
@@ -62,7 +54,8 @@ Implement each function in the TODO. Do the following steps:
 sure it works as you intenteded.
 - Run `pytest` to make sure it passsed the tests
 
-### 4️⃣ Committing and Pushing Changes using VSCode Codespaces
+
+### 3️⃣ Committing and Pushing Changes using VSCode Codespaces
 
 Once all the tests have completed:
 
@@ -77,6 +70,7 @@ Once all the tests have completed:
    - Select **Push**.
 4. **Verify you code has passed**: 
 
+
 ## 📘 Resources
 
 - **File I/O in Python**: Review foundational knowledge with Python’s [file I/O documentation](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files).
@@ -87,3 +81,8 @@ Once all the tests have completed:
 - **Debugging**: If you’re grappling with bugs or issues, seek help! Debugging is key to learning.
 - **Answer**: We have a file called answer.py. Only look at it if you are stuck for some time (30 min+)
 
+Should your functions exhibit unexpected behaviors or issues:
+- Place breakpoints in your code within VSCode.
+- Use the VSCode debugger to navigate through your code, inspect variables, and diagnose potential issues.
+- Modify your code as needed, guided by your findings during debugging.
+- [Debugger Tutorial](https://www.youtube.com/watch?v=7qZBwhSlfOo&t=7s)
