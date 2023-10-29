@@ -1,3 +1,53 @@
+"""
+#######################################################
+WARNING:
+
+The code below contains the solution to the problem. 
+
+ONLY refer to it after you've genuinely tried to 
+solve the problem on your own. Struggling with a problem 
+and trying to devise a solution on your own, even if not 
+successful, is an essential part of the learning process.
+
+Please ensure you've given it a fair attempt before diving 
+into the solution.
+
+#######################################################
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Problem 1: Write a function to write a string to a file.
 def write_string_to_file(s, filename):
     with open(filename, 'w') as f:
