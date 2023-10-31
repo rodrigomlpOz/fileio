@@ -50,7 +50,7 @@ all tests pass you can submit your code for review.
 Implement each function in the TODO. Do the following steps:
 
 - Add your implementation
-- Uncomment corresponding section on run_example_operations() and Run `python file.io` to make
+- Uncomment corresponding section on driver() and Run `python exercise.py` to make
 sure it works as you intenteded.
 - Run `pytest` to make sure it passsed the tests
 
